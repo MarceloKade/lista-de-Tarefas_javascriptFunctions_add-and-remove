@@ -1,5 +1,10 @@
 let listaTarefas = []; // Array que armazena as tarefas
 
+document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    adicionarTarefa();
+});
+
 function adicionarTarefa() {
     let novaTarefa = document.getElementById("nova-tarefa").value;
     if (novaTarefa !== "") { // Verifica se o campo não está vazio
